@@ -1,0 +1,45 @@
+﻿  Dot.cpp
+c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\dot.cpp(168): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  Source.cpp
+c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(186): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  LTexture.cpp
+  Generating Code...
+     Creating library C:\Users\C00195564\Desktop\Moving.Dot.SDL.Dot - Copy\Del\x64\Debug\Del.lib and object C:\Users\C00195564\Desktop\Moving.Dot.SDL.Dot - Copy\Del\x64\Debug\Del.exp
+LTexture.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+Source.obj : error LNK2001: unresolved external symbol SDL_GetError
+LTexture.obj : error LNK2019: unresolved external symbol SDL_MapRGB referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_FreeSurface referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_SetColorKey referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_CreateTextureFromSurface referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_SetTextureColorMod referenced in function "public: void __cdecl LTexture::setColor(unsigned char,unsigned char,unsigned char)" (?setColor@LTexture@@QEAAXEEE@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_SetTextureAlphaMod referenced in function "public: void __cdecl LTexture::setAlpha(unsigned char)" (?setAlpha@LTexture@@QEAAXE@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_SetTextureBlendMode referenced in function "public: void __cdecl LTexture::setBlendMode(enum SDL_BlendMode)" (?setBlendMode@LTexture@@QEAAXW4SDL_BlendMode@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_RenderCopyEx referenced in function "public: void __cdecl LTexture::render(int,int,struct SDL_Renderer *,struct SDL_Rect *,double,struct SDL_Point *,enum SDL_RendererFlip)" (?render@LTexture@@QEAAXHHPEAUSDL_Renderer@@PEAUSDL_Rect@@NPEAUSDL_Point@@W4SDL_RendererFlip@@@Z)
+LTexture.obj : error LNK2019: unresolved external symbol SDL_DestroyTexture referenced in function "public: void __cdecl LTexture::free(void)" (?free@LTexture@@QEAAXXZ)
+LTexture.obj : error LNK2019: unresolved external symbol IMG_Load referenced in function "public: bool __cdecl LTexture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Renderer *)" (?loadFromFile@LTexture@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUSDL_Renderer@@@Z)
+Source.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_DestroyWindow referenced in function "void __cdecl close(void)" (?close@@YAXXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function SDL_main
+Source.obj : error LNK2019: unresolved external symbol SDL_SetHint referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_CreateRenderer referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_SetRenderDrawColor referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_RenderClear referenced in function SDL_main
+Source.obj : error LNK2019: unresolved external symbol SDL_RenderPresent referenced in function SDL_main
+Source.obj : error LNK2019: unresolved external symbol SDL_DestroyRenderer referenced in function "void __cdecl close(void)" (?close@@YAXXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_GetTicks referenced in function SDL_main
+Source.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol SDL_Quit referenced in function "void __cdecl close(void)" (?close@@YAXXZ)
+Source.obj : error LNK2019: unresolved external symbol IMG_Init referenced in function "bool __cdecl init(void)" (?init@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol IMG_Quit referenced in function "void __cdecl close(void)" (?close@@YAXXZ)
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_isspace referenced in function ParseCommandLine
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_ShowSimpleMessageBox referenced in function OutOfMemory
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_SetMainReady referenced in function main_utf8
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_free referenced in function main_getcmdline
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_malloc referenced in function main_getcmdline
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_iconv_string referenced in function main_getcmdline
+SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol SDL_wcslen referenced in function main_getcmdline
+SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2_image.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\C00195564\Desktop\Moving.Dot.SDL.Dot - Copy\Del\x64\Debug\Del.exe : fatal error LNK1120: 32 unresolved externals
