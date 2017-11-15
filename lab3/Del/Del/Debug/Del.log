@@ -1,0 +1,9 @@
+﻿  Source.cpp
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(235): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(280): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(287): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(289): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(300): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(383): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\c00195564\desktop\online gaming\labs\moving.dot.sdl.dot - copy\del\del\source.cpp(387): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Del.vcxproj -> C:\Users\C00195564\Desktop\online gaming\labs\Moving.Dot.SDL.Dot - Copy\Del\Debug\Del.exe

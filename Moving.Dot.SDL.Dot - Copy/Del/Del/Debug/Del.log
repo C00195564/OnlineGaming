@@ -1,7 +1,0 @@
-﻿  Source.cpp
-c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(176): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(180): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(270): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(278): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\c00195564\desktop\moving.dot.sdl.dot - copy\del\del\source.cpp(289): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Del.vcxproj -> C:\Users\C00195564\Desktop\Moving.Dot.SDL.Dot - Copy\Del\Debug\Del.exe

@@ -40,6 +40,7 @@ void CTcpListener::Run()
 {
 	char buf[MAX_BUFFER_SIZE];
 	bool running = true;
+	std::cout << "Listening at port: " << m_ipAddress << "  port: " << std::to_string(m_port);
 	while (running)
 	{
 		// Create a listening socket
@@ -100,7 +101,6 @@ void CTcpListener::Run()
 									std::ostringstream ss;
 									ss << "SOCKET #" << sock << ": " << buf << "\r\n";
 									std::string strOut = ss.str();
-
 									send(outSock, strOut.c_str(), strOut.size() + 1, 0);
 								}
 							}
