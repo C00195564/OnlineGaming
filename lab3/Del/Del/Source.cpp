@@ -149,6 +149,7 @@ void GameOver(bool redWin, int timer)
 
 void onMessage(string);
 
+//receive data from the server
 void recieveMessage(SOCKET sock)
 {
 	char buf[4096];
@@ -187,8 +188,8 @@ int main(int argc, char* args[])
 		
 		bool caught = false;
 		//The dot that will be moving around on the screen
-		dot = Dot(true);
-		dot2 = Dot(false);
+		dot = Dot(true);//chaser
+		dot2 = Dot(false);//fleer
 		LocalPlayer = &dot;
 		RemotePlayer = &dot2;
 
@@ -232,7 +233,7 @@ int main(int argc, char* args[])
 		while (startGame == false)
 		{
 			recieveMessage(sock);
-			starttimer = SDL_GetTicks();
+			starttimer = SDL_GetTicks(); //timer starts when both players connect
 		}
 		
 
@@ -251,13 +252,13 @@ int main(int argc, char* args[])
 				{
 					quit = true;
 				}
-				//Handle input for the dot
+				//Handle input for the local player
 				LocalPlayer->handleEvent(e);
 			}
 			
-			//Move the dot
+			//Move the  local player, remote player uses onMessage to update position
 			LocalPlayer->move(SCREEN_HEIGHT, SCREEN_WIDTH);
-			RemotePlayer->move(SCREEN_HEIGHT, SCREEN_WIDTH);
+			
 
 			//Clear screen
 			SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -274,7 +275,7 @@ int main(int argc, char* args[])
 
 			if (isHost)
 			{
-				if (dot.Checkcollision(dot2.GetCenterX(), dot2.GetCenterY()))
+				if (dot.Checkcollision(dot2.GetCenterX(), dot2.GetCenterY()))	//check if players have collided
 				{
 					//game over red wins
 					GameOver(true, timer);
@@ -284,13 +285,16 @@ int main(int argc, char* args[])
 				//Update screen
 			SDL_RenderPresent(gRenderer);
 
-			currentTime = SDL_GetTicks() - starttimer;
+			// sdl ticks() startcounting thousandths of a second from the STARTUP of the program
+			currentTime = SDL_GetTicks() - starttimer; // take away the start time of game from the start time of program to get the time since start of game
 
-			timeInSeconds = currentTime / 1000;
+
+			timeInSeconds = currentTime / 1000;// get time in seconds
 
 
-			if (timeInSeconds != lastTime)
+			if (timeInSeconds != lastTime)// only done once per second
 			{
+				//update time on screen
 				timer = timeInSeconds;
 				TimeText.loadFromRenderedText(string("Time: " + to_string((int)timer)), SDL_Color(), gRenderer);
 				cout << "Time: " << timer << endl;
@@ -299,12 +303,15 @@ int main(int argc, char* args[])
 					//game over Blue wins
 					GameOver(false, timer);
 				}
+				lastTime = timeInSeconds;
 			}
 			
-			lastTime = timeInSeconds;
-
+			
+			//send update message of local player to other client so they can update their remote player
 			string message("Update " + LocalPlayer->GetPosAsString());
 			sendMessage(message, sock);
+
+			//get message from server
 			recieveMessage(sock);
 		}
 	}
@@ -315,31 +322,37 @@ int main(int argc, char* args[])
 	return 0;
 }
 
+//
 void onMessage(string message)
 {
 	//if the message is from yourself dont do anything
 	not_digit notADigit;
 
 	//what happens when the game recieves a message
-	
-	if (message.compare(0, 9, "Connected") == 0)
+
+	//take the first part of the message and compare it to a string
+	if (message.compare(0, 9, "Connected") == 0)	//0 and 9 define the part of the string to compare , "Connected" to if the comparison is true it returns 0
+
 	{
+
+		//take the string and remove everything but the integers in it 
 		string::iterator end = std::remove_if(message.begin(), message.end(), notADigit);
 		string all_numbers(message.begin(), end);
 		stringstream ss(all_numbers);
 		vector<int> vec;
+		int i;
 
-		for (int i = 0; ss >> i;)
+		for (; ss >> i;)
 		{
 			vec.push_back(i);
 			cout << i << endl;
 		}
-		if (vec.at(0) == 2)
+		if (vec.at(0) == 2) //if you are the first person to connect you are the chaser. see server project to see where this message is sent from
 		{
 			LocalPlayer = &dot;
 			RemotePlayer = &dot2;
 		}
-		else if (vec.at(0) == 3)
+		else if (vec.at(0) == 3) //if you are the second to connect you are the fleer.  see server project to see where this message is sent from
 		{
 			LocalPlayer = &dot2;
 			RemotePlayer = &dot;
@@ -384,7 +397,7 @@ void onMessage(string message)
 		}
 		else if (vec.at(0) == 0)
 		{
-			GameOver(true, timer);
+			GameOver(false, timer);
 		}
 		else
 		{

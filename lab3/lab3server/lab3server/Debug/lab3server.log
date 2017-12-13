@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\c00195564\desktop\lab3server\lab3server\main.cpp(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\c00195564\desktop\lab3server\lab3server\main.cpp(81): warning C4018: '<': signed/unsigned mismatch
+  lab3server.vcxproj -> C:\Users\C00195564\Desktop\lab3server\Debug\lab3server.exe

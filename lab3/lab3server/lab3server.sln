@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab3server", "lab3server\lab3server.vcxproj", "{1339DCA0-EF8C-4E54-94C6-87A226BFC335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Debug|x64.ActiveCfg = Debug|x64
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Debug|x64.Build.0 = Debug|x64
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Debug|x86.ActiveCfg = Debug|Win32
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Debug|x86.Build.0 = Debug|Win32
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Release|x64.ActiveCfg = Release|x64
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Release|x64.Build.0 = Release|x64
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Release|x86.ActiveCfg = Release|Win32
+		{1339DCA0-EF8C-4E54-94C6-87A226BFC335}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EBA90D3-EBD1-40C9-A33F-F8A7693EDEF4}
+	EndGlobalSection
+EndGlobal
